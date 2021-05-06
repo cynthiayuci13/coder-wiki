@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS-Border</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.7dceacc5.css" as="style"><link rel="preload" href="/assets/js/app.a9c2ee94.js" as="script"><link rel="preload" href="/assets/js/2.a53ace89.js" as="script"><link rel="preload" href="/assets/js/8.282b8d67.js" as="script"><link rel="prefetch" href="/assets/js/10.bcb884ce.js"><link rel="prefetch" href="/assets/js/11.9a7061b4.js"><link rel="prefetch" href="/assets/js/12.7b8dbbc1.js"><link rel="prefetch" href="/assets/js/13.412823ef.js"><link rel="prefetch" href="/assets/js/14.250d3fbf.js"><link rel="prefetch" href="/assets/js/15.c2056018.js"><link rel="prefetch" href="/assets/js/16.36fdc8cf.js"><link rel="prefetch" href="/assets/js/17.f39bb899.js"><link rel="prefetch" href="/assets/js/18.bdd601f5.js"><link rel="prefetch" href="/assets/js/19.6ef4cc36.js"><link rel="prefetch" href="/assets/js/20.a15e0dd6.js"><link rel="prefetch" href="/assets/js/21.dcb96758.js"><link rel="prefetch" href="/assets/js/22.ce709f1c.js"><link rel="prefetch" href="/assets/js/23.e4fc0d83.js"><link rel="prefetch" href="/assets/js/24.4bc4fee0.js"><link rel="prefetch" href="/assets/js/25.1a3dc2a8.js"><link rel="prefetch" href="/assets/js/26.79ac193b.js"><link rel="prefetch" href="/assets/js/27.7f9f4f4e.js"><link rel="prefetch" href="/assets/js/28.cbbac56a.js"><link rel="prefetch" href="/assets/js/29.ff4ad2f4.js"><link rel="prefetch" href="/assets/js/3.30ef2a9c.js"><link rel="prefetch" href="/assets/js/30.7df2f0c1.js"><link rel="prefetch" href="/assets/js/31.ddcc8f57.js"><link rel="prefetch" href="/assets/js/32.1c3a6409.js"><link rel="prefetch" href="/assets/js/33.b552f1c5.js"><link rel="prefetch" href="/assets/js/34.dde8457c.js"><link rel="prefetch" href="/assets/js/35.3fda5f22.js"><link rel="prefetch" href="/assets/js/36.a71da2de.js"><link rel="prefetch" href="/assets/js/37.688fe558.js"><link rel="prefetch" href="/assets/js/38.fa853fb3.js"><link rel="prefetch" href="/assets/js/39.0926dc82.js"><link rel="prefetch" href="/assets/js/4.4a215e9a.js"><link rel="prefetch" href="/assets/js/40.f17000af.js"><link rel="prefetch" href="/assets/js/41.baea77a5.js"><link rel="prefetch" href="/assets/js/42.06257587.js"><link rel="prefetch" href="/assets/js/43.cd76bb14.js"><link rel="prefetch" href="/assets/js/5.3b01fd55.js"><link rel="prefetch" href="/assets/js/6.9748dea1.js"><link rel="prefetch" href="/assets/js/7.051f705c.js"><link rel="prefetch" href="/assets/js/9.7c9ef602.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7dceacc5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="border-外框線"><a href="#border-外框線" class="header-anchor">#</a> Border 外框線</h2> <ol><li>outline 用來設置元素的輪廓線，用法和 border 一模一樣。</li> <li>輪廓和邊框不同的點，就是輪廓不會影響到可見框的大小，但 border 會影響 box modal。</li> <li>屬性值
+<table><thead><tr><th>用法</th> <th>說明</th> <th>備註</th></tr></thead> <tbody><tr><td>border</td> <td>所有四邊框線</td> <td></td></tr> <tr><td>border-top</td> <td>上框線</td> <td></td></tr> <tr><td>border-bottom</td> <td>下框線</td> <td></td></tr> <tr><td>border-left</td> <td>左框線</td> <td></td></tr> <tr><td>border-right</td> <td>右框線</td> <td></td></tr></tbody></table></li></ol> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">.box1:hover </span><span class="token punctuation">{</span>
+  <span class="token property">outline</span><span class="token punctuation">:</span> 10px red solid<span class="token punctuation">;</span> <span class="token comment">//輪廓線</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid red<span class="token punctuation">;</span> <span class="token comment">//邊框線，會被列入計算</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="border-radius-圓角效果"><a href="#border-radius-圓角效果" class="header-anchor">#</a> Border-radius 圓角效果</h2> <ol><li>用來設置圓角的半徑大小。</li> <li>border-radius 可以分別指定四個角的圓角。
+<table><thead><tr><th>用法</th> <th>說明</th></tr></thead> <tbody><tr><td>四個值</td> <td>左上 右上 右下 左下</td></tr> <tr><td>三個值</td> <td>左上 右上/左下 右下</td></tr> <tr><td>兩個值</td> <td>左上/右下、右上/左下</td></tr></tbody></table></li> <li>屬性值
+<table><thead><tr><th>用法</th> <th>說明</th> <th>備註</th></tr></thead> <tbody><tr><td>border-top-left-radius</td> <td>左上圓角</td> <td></td></tr> <tr><td>border-top-right-radius</td> <td>右上圓角</td> <td></td></tr> <tr><td>border-bottom-left-radius</td> <td>左下圓角</td> <td></td></tr> <tr><td>border-bottom-right-radius</td> <td>右下圓角</td> <td></td></tr></tbody></table></li></ol> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property">border-raidus</span><span class="token punctuation">:</span> 20px <span class="token operator">/</span> 40px<span class="token punctuation">;</span>
+<span class="token property">border-raidus</span><span class="token punctuation">:</span> 10px 10px 10px 10px<span class="token punctuation">;</span>
+<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+<span class="token property">border-radius</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span> <span class="token comment">//也可以將元素設置為一個圓形</span>
+</code></pre></div><h2 id="使用-border-製作三角形技巧"><a href="#使用-border-製作三角形技巧" class="header-anchor">#</a> 使用 border 製作三角形技巧</h2> <p>當寬高有設定時，加上 border 後，會發現上下左右顯示為梯形，若把寬高設計為 0 時，就會發現只剩三角形。這次只要使用 transparent 將所有顏色設為透明，並開啟你想要的箭頭方向，設定箭頭顏色即可。</p> <p>下方為顯示向上箭頭範例：</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property">width</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+
+<span class="token comment">/* 設置四個方向的邊框*/</span>
+<span class="token property">border</span><span class="token punctuation">:</span> 8px solid transparent<span class="token punctuation">;</span>
+
+<span class="token comment">/* 去除上邊框 */</span>
+<span class="token property">border-top</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+
+<span class="token comment">/* 單獨设置下邊框的颜色 */</span>
+<span class="token property">border-bottom-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a9c2ee94.js" defer></script><script src="/assets/js/2.a53ace89.js" defer></script><script src="/assets/js/8.282b8d67.js" defer></script>
+  </body>
+</html>

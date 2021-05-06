@@ -1,7 +1,7 @@
 module.exports = {
   title: "Yuci's CoderWiki ", //網站標題
   description: '',
-  dest: 'public',
+  dest: './dist',
   base: '/',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -17,7 +17,9 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
-      { text: 'CSS', link: '/docs/frontend/', icon: 'reco-message' },
+      { text: 'CSS', link: '/docs/css/', icon: 'reco-message' },
+      { text: 'JS', link: '/docs/js/', icon: 'reco-message' },
+      { text: 'Vue', link: '/docs/vue/', icon: 'reco-message' },
       {
         text: 'GitHub',
         icon: 'reco-github',
@@ -30,11 +32,12 @@ module.exports = {
         //   },
         // ],
       },
-      { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
+      // { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
     ],
     sidebar: {
-      '/docs/frontend/': [
+      '/docs/css/': [
         '',
+        'csstips',
         'box-modal',
         'selector',
         'float',
@@ -56,6 +59,22 @@ module.exports = {
         'form',
         'table',
       ],
+      '/docs/js/': [
+        '',
+        'type',
+        'conditional',
+        'function',
+        'scope',
+        'this',
+        'object',
+        'prototype',
+        'array',
+        'date',
+        'math',
+        'string',
+        'regex',
+      ],
+      '/docs/vue/': ['', 'intro', 'vuepress'],
     },
     type: 'home',
     // 部落格設定

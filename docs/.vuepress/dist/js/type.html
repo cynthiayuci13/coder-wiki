@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JS-資料型別與運算</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.7dceacc5.css" as="style"><link rel="preload" href="/assets/js/app.a9c2ee94.js" as="script"><link rel="preload" href="/assets/js/2.a53ace89.js" as="script"><link rel="preload" href="/assets/js/38.fa853fb3.js" as="script"><link rel="prefetch" href="/assets/js/10.bcb884ce.js"><link rel="prefetch" href="/assets/js/11.9a7061b4.js"><link rel="prefetch" href="/assets/js/12.7b8dbbc1.js"><link rel="prefetch" href="/assets/js/13.412823ef.js"><link rel="prefetch" href="/assets/js/14.250d3fbf.js"><link rel="prefetch" href="/assets/js/15.c2056018.js"><link rel="prefetch" href="/assets/js/16.36fdc8cf.js"><link rel="prefetch" href="/assets/js/17.f39bb899.js"><link rel="prefetch" href="/assets/js/18.bdd601f5.js"><link rel="prefetch" href="/assets/js/19.6ef4cc36.js"><link rel="prefetch" href="/assets/js/20.a15e0dd6.js"><link rel="prefetch" href="/assets/js/21.dcb96758.js"><link rel="prefetch" href="/assets/js/22.ce709f1c.js"><link rel="prefetch" href="/assets/js/23.e4fc0d83.js"><link rel="prefetch" href="/assets/js/24.4bc4fee0.js"><link rel="prefetch" href="/assets/js/25.1a3dc2a8.js"><link rel="prefetch" href="/assets/js/26.79ac193b.js"><link rel="prefetch" href="/assets/js/27.7f9f4f4e.js"><link rel="prefetch" href="/assets/js/28.cbbac56a.js"><link rel="prefetch" href="/assets/js/29.ff4ad2f4.js"><link rel="prefetch" href="/assets/js/3.30ef2a9c.js"><link rel="prefetch" href="/assets/js/30.7df2f0c1.js"><link rel="prefetch" href="/assets/js/31.ddcc8f57.js"><link rel="prefetch" href="/assets/js/32.1c3a6409.js"><link rel="prefetch" href="/assets/js/33.b552f1c5.js"><link rel="prefetch" href="/assets/js/34.dde8457c.js"><link rel="prefetch" href="/assets/js/35.3fda5f22.js"><link rel="prefetch" href="/assets/js/36.a71da2de.js"><link rel="prefetch" href="/assets/js/37.688fe558.js"><link rel="prefetch" href="/assets/js/39.0926dc82.js"><link rel="prefetch" href="/assets/js/4.4a215e9a.js"><link rel="prefetch" href="/assets/js/40.f17000af.js"><link rel="prefetch" href="/assets/js/41.baea77a5.js"><link rel="prefetch" href="/assets/js/42.06257587.js"><link rel="prefetch" href="/assets/js/43.cd76bb14.js"><link rel="prefetch" href="/assets/js/5.3b01fd55.js"><link rel="prefetch" href="/assets/js/6.9748dea1.js"><link rel="prefetch" href="/assets/js/7.051f705c.js"><link rel="prefetch" href="/assets/js/8.282b8d67.js"><link rel="prefetch" href="/assets/js/9.7c9ef602.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7dceacc5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="資料型別"><a href="#資料型別" class="header-anchor">#</a> 資料型別</h2> <p>在 JS 中一共有六種數據類型，其中 String／Number／Boolean／Null／ Undefined 屬於基本數據類型，而 Object 屬於引用數據類型。</p> <ul><li>String 字串</li> <li>Number 數值</li> <li>Boolean 布林值</li> <li>Null 空值</li> <li>Undefined 未定義</li> <li>Object 對象</li></ul> <h3 id="string-字串"><a href="#string-字串" class="header-anchor">#</a> String 字串</h3> <ul><li>在 JS 中字符串需要使用引號引起來。</li> <li>使用雙引號或單引號都可以，但是不要混著用。</li> <li>引號不能嵌套，雙引號不能放雙引號，單引號不能放單引號。</li> <li>在字串中我們可以使用<code>\</code>作為轉義字符。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'hello'</span><span class="token punctuation">;</span>
+str <span class="token operator">=</span> <span class="token string">'我說:&quot;今天天氣真不錯！&quot;'</span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> prettier<span class="token operator">-</span>ignore <span class="token operator">--</span><span class="token operator">&gt;</span>
+str <span class="token operator">=</span> <span class="token string">&quot;Your\'s&quot;</span><span class="token punctuation">;</span> <span class="token comment">//若要保留'，請加入轉義字符\</span>
+</code></pre></div><h3 id="number-數值"><a href="#number-數值" class="header-anchor">#</a> Number 數值</h3> <ol><li>在 JS 中所有的數值都是 Number 類型，包括整數和浮點數(小數)。</li> <li>數字最大值 Number.MAX_VALUE：1.7976931348623157e+308，數字最小值(大於 0 的最小值) Number.MIN_VALUE：5e-324。</li> <li>如果使用的數字超過最大值，則會返回<code>Infinity</code>，代表正無窮，使用 typeof 檢查 Infinity 也會返回 number。</li> <li><code>NaN</code> 是一個特殊的數字，表示 Not A Number，使用 typeof 檢查一個 NaN 也會返回 number。</li> <li>在 JS 中整數的運算基本可以保證精確，但要注意浮點運算，可能得到一個不精確的結果，所以䀆量不要使用 JS 進行對精確度要求比較高的運算。</li></ol> <h3 id="boolean-布林值"><a href="#boolean-布林值" class="header-anchor">#</a> Boolean 布林值</h3> <p>主要用來做邏輯判斷，使用 typeof 檢查一個佈爾值時，會返回 boolean。</p> <ul><li>true：表示真</li> <li>false：表示假</li></ul> <h3 id="null-空值"><a href="#null-空值" class="header-anchor">#</a> Null 空值</h3> <ol><li>Null 空值類型的值只有一個，就是 null，null 這個值專門用來表示一個為空的對象。</li> <li>使用 typeof 檢查一個 null 值時，會返回 object。</li></ol> <h3 id="undefined-未定義"><a href="#undefined-未定義" class="header-anchor">#</a> Undefined 未定義</h3> <ol><li>Undefined 未定義類型的值只有一個，就 undefind。</li> <li>當宣告一個變數，並未給序賦值時，它的值就是 <code>undefined</code>。</li> <li>使用 typeof 檢查一個 undefined 時也會返回 undefined。</li></ol> <h3 id="object-對象"><a href="#object-對象" class="header-anchor">#</a> Object 對象</h3> <h2 id="使用-typeof-判斷變數型別"><a href="#使用-typeof-判斷變數型別" class="header-anchor">#</a> 使用 typeof 判斷變數型別</h2> <blockquote><p>文法：<code>typeof</code> 變數</p></blockquote> <ul><li>typeof 就是運算符，可以來獲得一個值的類型，它會將該值的類型以<code>字串(string)</code>的形式返回。</li> <li>檢查字符串時，會返回 string。</li> <li>檢查數值時，會返回 number。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* 數字123 */</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> a<span class="token punctuation">)</span>
+
+結果<span class="token operator">==</span><span class="token operator">&gt;</span>number
+
+<span class="token comment">/* 字符串123 */</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token string">'123'</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> b<span class="token punctuation">)</span>
+
+結果<span class="token operator">==</span><span class="token operator">&gt;</span>string
+</code></pre></div><h2 id="強制類型轉換"><a href="#強制類型轉換" class="header-anchor">#</a> 強制類型轉換</h2> <ol><li>指將一個數據類型強制轉換為其他的數據類型。</li> <li>可轉換類型為 String／Number／Boolean，轉 Null 與 undefined 沒意義。</li></ol> <h3 id="強制轉換-string"><a href="#強制轉換-string" class="header-anchor">#</a> 強制轉換 String</h3> <blockquote><p><strong>第一種方法</strong><br>調用<code>toString()</code>方法</p></blockquote> <ul><li>該方法不會影響到原變數，它會將轉換的結果返回。</li> <li>null 和 undefined 這兩個值沒有 toString()方法，如果調用他們的方法，會報錯<code>Cannot read property 'toString' of null/undefined</code>。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* Number to String */</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;123&quot;</span>
+
+<span class="token comment">/* Boolean to String  */</span>
+a <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;true&quot;</span>
+
+<span class="token comment">/* null not to String  */</span>
+a <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span>報錯
+
+<span class="token comment">/* undefined not to String  */</span>
+a <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span>報錯
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><br> <blockquote><p><strong>第二種方法</strong><br>調用<code>String()</code>函數</p></blockquote> <ul><li>將被轉換的數據作為參數傳遞給函數。</li> <li>使用 String()函數做強制類型轉換時，對於 Number 和 Boolean 實際上就是調用的 toString()方法；但是對於 null 和 undefined，就不會調用 toString()方法，它會將 null 直接轉換為<code>&quot;null&quot;</code>(字串)，將 undefined 直接轉換為<code>&quot;undefined&quot;</code>。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* Number to String */</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;123&quot;</span>
+
+<span class="token comment">/* null to String */</span>
+a <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;null&quot;</span>
+
+<span class="token comment">/* undefined to String */</span>
+a <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;undefined&quot;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="強制轉換-number"><a href="#強制轉換-number" class="header-anchor">#</a> 強制轉換 Number</h3> <blockquote><p><strong>第一種方法</strong><br>調用<code>Number()</code>函數</p></blockquote> <h4 id="字串轉數字"><a href="#字串轉數字" class="header-anchor">#</a> 字串轉數字</h4> <ol><li>如果是純數字的字符串，則直接將其轉換為數字。</li> <li>如果字符串中有非數字的內容，則轉換為 <code>NaN</code>，請改為使用第二種 parseInt()或 parseFloat()方法。</li> <li>如果字符串是一個空串或者是一個全是空格的字符串，則轉換為<code>0</code>。</li></ol> <h4 id="布林值轉數字"><a href="#布林值轉數字" class="header-anchor">#</a> 布林值轉數字</h4> <p>true 轉成 1<br>false 轉成 0</p> <h4 id="null-轉數字"><a href="#null-轉數字" class="header-anchor">#</a> null 轉數字</h4> <p>0</p> <h4 id="undefined-轉數字"><a href="#undefined-轉數字" class="header-anchor">#</a> undefined 轉數字</h4> <p>NaN</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token string">'123'</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">123</span>
+
+a <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">0</span>
+
+a <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">0</span>
+
+a <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">NaN</span>
+
+a <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">0</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><br> <blockquote><p><strong>第二種方法</strong><br>調用<code>parseInt()</code>,<code>parseFloat()</code>函數</p></blockquote> <ul><li>專門用來對付字串，可以將一個字符串中的有效的整數內容取出來，然後轉換為 Number。</li> <li>不可以拿來其它類型使用，如果對非 String 使用會先將變數轉換為字串後，在轉數字，例如：當參數裡面放布林值時，會將 true 轉換為字串，但因判別裡面未有數字，所以會回傳<code>NaN</code>。</li> <li>parseInt() 把一個字符串轉換為一個整數。</li> <li>parseFloat() 把一個字符串轉換為一個浮點數，作用與 parseInt()一樣，差別在有小數點。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>a <span class="token operator">=</span> <span class="token string">'123567a567px'</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">123567</span>
+
+a <span class="token operator">=</span> <span class="token number">198.23</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">198</span>
+
+a <span class="token operator">=</span> <span class="token string">'123.456.789px'</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">123.456</span>
+
+a <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">NaN</span>
+
+<span class="token comment">//可以在parseInt()中傳遞一個第二個參數，來指定數字的進制</span>
+a <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="強制轉換-boolean"><a href="#強制轉換-boolean" class="header-anchor">#</a> 強制轉換 Boolean</h3> <blockquote><p>調用<code>Boolean()</code>函數</p></blockquote> <h4 id="數字轉布林值"><a href="#數字轉布林值" class="header-anchor">#</a> 數字轉布林值</h4> <p>除了 0 和 NaN，其餘的都是 true</p> <h4 id="字串轉布林值"><a href="#字串轉布林值" class="header-anchor">#</a> 字串轉布林值</h4> <p>除了空字串，其餘的都是 true</p> <h4 id="null-與-undefined-轉布林值"><a href="#null-與-undefined-轉布林值" class="header-anchor">#</a> null 與 undefined 轉布林值</h4> <p>都為 false</p> <h4 id="object"><a href="#object" class="header-anchor">#</a> object</h4> <p>對象會轉換為 true</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* Number to Boolean */</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment">//正負值數字</span>
+a <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">123</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Boolean</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">Infinity</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Boolean</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Boolean</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">NaN</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Boolean</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token comment">/* String to Boolean */</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Boolean</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Boolean</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token comment">/* null to Boolean */</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Boolean</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token comment">/* undefined to Boolean */</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token function">Boolean</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="算數運算符號"><a href="#算數運算符號" class="header-anchor">#</a> 算數運算符號</h2> <ol><li>當對非 Number 類型的值進行運算時，會將這些值轉換為 <code>Number</code> 然後在運算。</li> <li>任何值和 NaN 做運算都得 NaN。</li></ol> <h3 id="加法"><a href="#加法" class="header-anchor">#</a> 加法(+)</h3> <ul><li>可以對兩個值進行加法運算，並將結果返回。</li> <li>如果對<code>兩個字符(string)</code>進行<code>加法</code>運算，則會做拼接，並將兩個字符串拚接為一個字符返回。</li> <li>任何值和字符串做加法運算，都會先轉換為字符，然後再和字符串做拼接。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> result <span class="token operator">=</span> a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">124</span>
+
+result <span class="token operator">=</span> <span class="token number">456</span> <span class="token operator">+</span> <span class="token number">789</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">1245</span>
+
+result <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">//true自動轉換number，結果為1</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">2</span>
+
+result <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">+</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">1</span>
+
+result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token keyword">null</span><span class="token punctuation">;</span><span class="token comment">//null自動轉換number，結果為0</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">2</span>
+
+result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">NaN</span><span class="token punctuation">;</span> <span class="token comment">//任何值和 NaN 做運算都得 NaN</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">NaN</span>
+
+result <span class="token operator">=</span> <span class="token string">&quot;你好&quot;</span> <span class="token operator">+</span> <span class="token string">&quot;大帥哥&quot;</span><span class="token punctuation">;</span> <span class="token comment">//兩字串會全轉字串在拼接，不會轉number</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;你好大帥哥&quot;</span>
+
+result <span class="token operator">=</span> <span class="token number">123</span> <span class="token operator">+</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">;</span> <span class="token comment">//任何值和字符串做加法運算，都會先轉換為字符</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;1231&quot;</span>
+
+result <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">+</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;truehello&quot;</span>
+
+result <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token string">&quot;3&quot;</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;33&quot;</span>
+
+result <span class="token operator">=</span> <span class="token string">&quot;1&quot;</span> <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;123&quot;</span>
+</code></pre></div><h3 id="補充-使用加法轉換字串小技巧"><a href="#補充-使用加法轉換字串小技巧" class="header-anchor">#</a> 補充-使用加法轉換字串小技巧</h3> <p>上述提到強制轉換 String 有兩種方式，分別為 toString()與 String()，在這裡還有一種技巧也可以。<code>利用任何值和字符串相加都會轉換為字符，並做拼接的特點</code>，隱式的類型轉換，由瀏覽器自動完成，實際上它也是調用 String()函數。</p> <blockquote><p>任意的數據類型 <code>+</code> <code>&quot;&quot;(空字串)</code> =&gt;即可將其轉換為 String</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+c <span class="token operator">=</span> c <span class="token operator">+</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;123&quot;</span>
+
+<span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+c <span class="token operator">=</span> c <span class="token operator">+</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;null&quot;</span>
+</code></pre></div><h3 id="減法"><a href="#減法" class="header-anchor">#</a> 減法(-)</h3> <p>可以對兩個值進行減法運算，並將結果返回。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>result <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">-</span> <span class="token number">5</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">95</span>
+
+result <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">-</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">99</span>
+
+result <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">-</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">;</span> <span class="token comment">//不是加法，減法一樣轉換為number</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">99</span>
+</code></pre></div><h3 id="補充-使用減法轉換數值小技巧"><a href="#補充-使用減法轉換數值小技巧" class="header-anchor">#</a> 補充-使用減法轉換數值小技巧</h3> <p>之前強制轉換數值使用 Number()，但有提到<code>任何值做- * /運算時都會自動轉換為Number</code>的特點做隱式的類型轉換，可以通過為一個值<code>-0</code>來將其轉換為 Number。原理和 Number()函數一樣，使用起來更加簡單。</p> <blockquote><p>任意的數據類型 <code>-</code> <code>0</code> =&gt;即可將其轉換為 Number</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token string">&quot;123&quot;</span><span class="token punctuation">;</span>
+d <span class="token operator">=</span> d <span class="token operator">-</span> <span class="token number">0</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">123</span>
+</code></pre></div><h3 id="乘法"><a href="#乘法" class="header-anchor">#</a> 乘法(*)</h3> <p>可以對兩個值進行乘法運算。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">4</span>
+
+result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token string">&quot;8&quot;</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">16</span>
+
+result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">NaN</span>
+
+result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">0</span>
+</code></pre></div><h3 id="除法"><a href="#除法" class="header-anchor">#</a> 除法(/)</h3> <p>可以對兩個值進行除法運算。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>result <span class="token operator">=</span> <span class="token number">4</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">2</span>
+
+result <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">1.5</span>
+</code></pre></div><h3 id="餘數"><a href="#餘數" class="header-anchor">#</a> 餘數(%)</h3> <p>相除之後未整除之餘數。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>result <span class="token operator">=</span> <span class="token number">9</span> <span class="token operator">%</span> <span class="token number">3</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">3</span>
+
+result <span class="token operator">=</span> <span class="token number">9</span> <span class="token operator">%</span> <span class="token number">4</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">1</span>
+
+result <span class="token operator">=</span> <span class="token number">9</span> <span class="token operator">%</span> <span class="token number">5</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">4</span>
+</code></pre></div><h2 id="補充-使用一元運算符轉換數值小技巧"><a href="#補充-使用一元運算符轉換數值小技巧" class="header-anchor">#</a> 補充-使用一元運算符轉換數值小技巧</h2> <p>原理和 Number()函數一樣，可以對一個其他的數據類型使用<code>+</code>，來將其轉換為 number。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>result <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">+</span><span class="token string">&quot;2&quot;</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;123&quot;</span>
+
+result <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token operator">+</span><span class="token string">&quot;2&quot;</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">//字串前在加一個`+`，即轉正數</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">6</span>
+
+result <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token operator">+</span><span class="token boolean">true</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">5</span>
+</code></pre></div><h2 id="補充-進制表示法"><a href="#補充-進制表示法" class="header-anchor">#</a> 補充-進制表示法</h2> <p>正常是使用 10 進制表示法。</p> <ol><li>16 進制的數字，則需要以<code>0x</code>開頭。</li> <li>8 進制的數字，則需要以<code>0</code>開頭。</li> <li>2 進制的數字，則需要以<code>0b</code>開頭，但是不是所有的瀏覽器都支援。</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* 16進制 */</span>
+a <span class="token operator">=</span> <span class="token number">0x10</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token number">0xff</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token number">0xcafe</span><span class="token punctuation">;</span>
+
+<span class="token comment">/* 8進制 */</span>
+a <span class="token operator">=</span> <span class="token number">070</span><span class="token punctuation">;</span>
+
+<span class="token comment">/* 2進制 */</span>
+a <span class="token operator">=</span> <span class="token number">0b10</span><span class="token punctuation">;</span>
+
+<span class="token comment">//向&quot;070&quot;這種字符串，有些瀏覽器會當成8進制解析，有些會當成10進制</span>
+a <span class="token operator">=</span> <span class="token string">'070'</span><span class="token punctuation">;</span>
+
+<span class="token comment">//可以在parseInt()中傳遞一個第二個參數，來指定數字的進制</span>
+a <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="遞增與遞減"><a href="#遞增與遞減" class="header-anchor">#</a> 遞增與遞減</h2> <h3 id="遞增"><a href="#遞增" class="header-anchor">#</a> 遞增(++)</h3> <ul><li>通過遞增可以使變數在自身的基礎上增加 1。</li> <li>遞增分成兩種：後++(a++) 和 前++(++a)</li> <li>無論是那一種都會立即使原變數的值自增 1，但兩者不同的是 a++和++a 的值不同。
+<ul><li>a++的值等於<code>原變數的值</code>（第一次，自增前的值）</li> <li>++a 的值等於<code>新值</code> （第一次，自增後的值）</li></ul></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* a++ */</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+a<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment">//第一次</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">1</span>
+
+a<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment">//第二次</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">2</span>
+
+<span class="token comment">/* ++a */</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token operator">++</span>a<span class="token punctuation">;</span> <span class="token comment">//第一次</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">2</span>
+
+<span class="token operator">++</span>a<span class="token punctuation">;</span> <span class="token comment">//第二次</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">3</span>
+
+<span class="token keyword">var</span> d <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> result <span class="token operator">=</span> d<span class="token operator">++</span> <span class="token operator">+</span> <span class="token operator">++</span>d <span class="token operator">+</span> d <span class="token punctuation">;</span> <span class="token comment">//d++(20) + ++d(22) + 22</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">64</span>
+</code></pre></div><h3 id="遞減"><a href="#遞減" class="header-anchor">#</a> 遞減(--)</h3> <ul><li>通過遞增可以使變數在自身的基礎上減 1。</li> <li>遞增分成兩種：後--(a--) 和 前--(--a)</li> <li>無論是那一種都會立即使原變數的值自減 1，但兩者不同的是 a--和--a 的值不同。
+<ul><li>a--的值等於<code>原變數的值</code>（第一次，自減前的值）</li> <li>--a 的值等於<code>新值</code> （第一次，自減後的值）</li></ul></li></ul> <h2 id="邏輯運算符號"><a href="#邏輯運算符號" class="header-anchor">#</a> 邏輯運算符號</h2> <p>總共有三種邏輯運算符。</p> <h3 id="不等於"><a href="#不等於" class="header-anchor">#</a> 不等於(!)</h3> <ul><li>所謂非運算就是值對一個布林值進行取反操作，true 變 false，false 變 true。</li> <li>如果對一個值進行兩次取反，它不會變化。</li> <li>如果對非布林值進行運算，則會將其轉換為<code>布林值</code>後再取反。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token operator">!</span>a<span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token operator">!</span><span class="token operator">!</span>a<span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+</code></pre></div><h3 id="補充-使用不等於-強制轉換布林小技巧"><a href="#補充-使用不等於-強制轉換布林小技巧" class="header-anchor">#</a> 補充-使用不等於(!)強制轉換布林小技巧</h3> <p>我們可以利用上述特點，來將一個其他的數據類型轉換為布林值，可以為一個任意數據類型取兩次反，來將其轉換為布林值，原理和 Boolean()函數一樣。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment">//對非布林值進行運算，則會將其轉換為布林值後再取反</span>
+b <span class="token operator">=</span> <span class="token operator">!</span>b<span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment">//對非布林值進行運算，則會將其轉換為布林值後再取反</span>
+b <span class="token operator">=</span> <span class="token operator">!</span><span class="token operator">!</span>b<span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+</code></pre></div><h3 id="等於"><a href="#等於" class="header-anchor">#</a> 等於(&amp;&amp;)</h3> <ul><li>運算規則
+<ul><li>兩個值中黽要有一個值為 <code>false</code>就返回 false。<br></li> <li>兩個值都為 <code>true</code> 時，才會返回 true。</li> <li>如果<code>第一個值為 false</code>，則不會看第二個值。</li></ul></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* 如果兩個值都是true則返回true */</span>
+<span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">&amp;&amp;</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+<span class="token comment">/* 只要有一個false，就返回false */</span>
+result <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">&amp;&amp;</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+result <span class="token operator">=</span> <span class="token boolean">false</span> <span class="token operator">&amp;&amp;</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+result <span class="token operator">=</span> <span class="token boolean">false</span> <span class="token operator">&amp;&amp;</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+</code></pre></div><h3 id="或者"><a href="#或者" class="header-anchor">#</a> 或者(||)</h3> <ul><li>運算規則
+<ul><li>兩個值中隻要有一個<code>true</code>，就返回 true。</li> <li>如果兩個值都為<code>false</code>，才返回 false。</li> <li>如果<code>第一個值為true</code>，則不會檢查第二個值。</li></ul></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* 兩個都是false，則返回false */</span>
+result <span class="token operator">=</span> <span class="token boolean">false</span> <span class="token operator">||</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token comment">/* 只要有一個true，就返回true */</span>
+result <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">||</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+result <span class="token operator">=</span> <span class="token boolean">false</span> <span class="token operator">||</span> <span class="token boolean">true</span> <span class="token punctuation">;</span>
+result <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">||</span> <span class="token boolean">true</span> <span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+</code></pre></div><h3 id="等於-與或者-與非布林值進行運算"><a href="#等於-與或者-與非布林值進行運算" class="header-anchor">#</a> 等於(&amp;&amp;)與或者(||)與非布林值進行運算</h3> <ul><li>當對<code>非布林值</code>進行與或運算時，會先將其轉換為布林值，然後再運算，並且返回原值。</li> <li><code>等於(&amp;&amp;)</code>運算規則
+<ul><li>如果第一個值為<code>true</code>，則必然返回第二個值。</li> <li>如果第一個值為<code>false</code>，則直接返回第一個值。</li></ul></li> <li><code>或者(||)</code>運算規則
+<ul><li>如果第一個值為<code>true</code>，則直接返回第一個值。</li> <li>如果第一個值為<code>false</code>，則返回第二個值。</li></ul></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* 兩個值都為true，則返回後面的 */</span>
+result <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">&amp;&amp;</span> <span class="token number">6</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">6</span>
+
+<span class="token comment">/* 如果兩個值中有false，則返回false */</span>
+result <span class="token operator">=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token number">2</span><span class="token punctuation">;</span>
+result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> <span class="token number">0</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">0</span>
+
+<span class="token comment">/* 如果兩個false，則返回最前面的false */</span>
+result <span class="token operator">=</span> <span class="token number">NaN</span> <span class="token operator">&amp;&amp;</span> <span class="token number">0</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">NaN</span>
+
+result <span class="token operator">=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token number">NaN</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">0</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* 如果第一個值為true，則直接返回第一個值 */</span>
+result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">||</span> <span class="token number">1</span><span class="token punctuation">;</span>
+result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">||</span> <span class="token number">NaN</span><span class="token punctuation">;</span>
+result <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">2</span>
+
+<span class="token comment">/* 如果第一個值為false，則直接返回第二個值 */</span>
+result <span class="token operator">=</span> <span class="token number">NaN</span> <span class="token operator">||</span> <span class="token number">1</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">1</span>
+
+result <span class="token operator">=</span> <span class="token number">NaN</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">0</span>
+
+result <span class="token operator">=</span> <span class="token string">&quot;&quot;</span> <span class="token operator">||</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">;</span>  <span class="token comment">//空字串為false</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token string">&quot;hello&quot;</span>
+
+result <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">||</span> <span class="token string">&quot;你好&quot;</span><span class="token punctuation">;</span> <span class="token comment">//-1為true</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token operator">-</span><span class="token number">1</span>
+</code></pre></div><h2 id="賦值運算符號"><a href="#賦值運算符號" class="header-anchor">#</a> 賦值運算符號</h2> <table><thead><tr><th>符號</th> <th>說明</th></tr></thead> <tbody><tr><td>+=</td> <td>a += 5 等價於 a = a + 5</td></tr> <tr><td>-=</td> <td>a -= 5 等價於 a = a - 5</td></tr> <tr><td>*=</td> <td>a _= 5 等價於 a = a _ 5</td></tr> <tr><td>/=</td> <td>a /= 5 等價於 a = a / 5</td></tr> <tr><td>%=</td> <td>a %= 5 等價於 a = a % 5</td></tr></tbody></table> <h2 id="關係運算符號"><a href="#關係運算符號" class="header-anchor">#</a> 關係運算符號</h2> <p>通過關係運算符可以比較兩個值之間的大小關係，如果關係成立它會返回 true，如果關係不成立則返回 false。</p> <table><thead><tr><th>符號</th> <th>說明</th></tr></thead> <tbody><tr><td>&gt;</td> <td>判斷符號左側的值是否大於右側的值，如果關係成立，返回 true，如果關係不成立則返回 false。</td></tr> <tr><td>&gt;=</td> <td>判斷符號左側的值是否大於或等於右側的值</td></tr> <tr><td>&lt;</td> <td>小於</td></tr> <tr><td>&lt;=</td> <td>小於等於</td></tr></tbody></table> <h4 id="當非數字比較時"><a href="#當非數字比較時" class="header-anchor">#</a> 當非數字比較時</h4> <ul><li>對於非數值進行比較時，會將其轉換為<code>數字</code>然後在比較。</li> <li>字串轉數字為 NaN，任何值和 NaN 做任何比較都是 false。</li> <li>如果符號兩側的值都是字符串時，不會將其轉換為數字進行比較，而會分別比較字符串中字符的<code>Unicode 編碼</code>，比較字符編碼時是一位一位進行比較，在實際應用上可以拿它來進行英文排序使用。</li> <li>如果比較的兩個字符串型的數字，可能會得到不可預期的結果，所以在比較兩個字符串型的數字時，一定要轉型。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>result <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+result <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">&gt;</span> <span class="token number">5</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+result <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">&gt;=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+result <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&gt;</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">//會將非數值轉換數字，true為1</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+result <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&gt;=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+result <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&gt;</span> <span class="token string">&quot;0&quot;</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+result <span class="token operator">=</span> <span class="token number">10</span> <span class="token operator">&lt;=</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">;</span> <span class="token comment">//字串轉數字為NaN，任何值和NaN做任何比較都是false</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+result <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token operator">&gt;</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">//false為0,true為1</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+result <span class="token operator">=</span> <span class="token string">&quot;11&quot;</span> <span class="token operator">&lt;</span> <span class="token string">&quot;5&quot;</span><span class="token punctuation">;</span> <span class="token comment">//不會轉數字，而是去比較字串的Unicode 編碼，比較第一位1&lt;5</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+result <span class="token operator">=</span> <span class="token string">&quot;abc&quot;</span> <span class="token operator">&lt;</span> <span class="token string">&quot;bcd&quot;</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+result <span class="token operator">=</span> <span class="token string">&quot;11123123123123123123&quot;</span> <span class="token operator">&lt;</span> <span class="token string">&quot;5&quot;</span><span class="token punctuation">;</span> <span class="token comment">//正常應該是會大於才對，但因為兩邊都是字串，5大於第一位數字1</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+result <span class="token operator">=</span> <span class="token string">&quot;11123123123123123123&quot;</span> <span class="token operator">&lt;</span> <span class="token operator">+</span><span class="token string">&quot;5&quot;</span><span class="token punctuation">;</span> <span class="token comment">//加上+轉型數字</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+</code></pre></div><h2 id="補充-unicode-編碼"><a href="#補充-unicode-編碼" class="header-anchor">#</a> 補充-Unicode 編碼</h2> <p>在字符串中使用轉義字符輸入 Unicode 編碼<code>\u四位編碼</code></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'\u2620'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>在網頁中使用 Unicode 編碼<code>&amp;#編碼</code>，但這裡的編碼需要的是 10 進制，而 Unicode 為 16 進制。</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token entity" title="&amp;#9760;">&amp;#9760;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="關係運算符號-2"><a href="#關係運算符號-2" class="header-anchor">#</a> 關係運算符號</h2> <ul><li>相等運算符用來比較兩個值是否相等，如果相等會返回 true，否則返回 false。</li> <li>undefined 衍生自 null，所以這兩個值做相等判斷時，會返回 true。</li> <li>NaN 不和任何值相等，包括他本身。</li></ul> <table><thead><tr><th>符號</th> <th>說明</th></tr></thead> <tbody><tr><td>==</td> <td>當使用==來比較兩個值時，如果值的類型不同，則會自動進行類型轉換，將其轉換為相同的類型，然後在比較。</td></tr> <tr><td>!=</td> <td>用來判斷兩個值是否不相等，如果不相等返回 true，否則返回 false，不相等也會對變數進行自動的類型轉換。</td></tr> <tr><td>===</td> <td>用來判斷兩個值是否全等，它和相等類似，不同的是它不會做自動的類型轉換，如果兩個值的類型不同，直接返回 false。</td></tr> <tr><td>!==</td> <td>用來判斷兩個值是否不全等，和不等類似，不同的是它不會做自動的類型轉換，如果兩個值的類型不同，直接返回 true。</td></tr></tbody></table> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+a <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token string">&quot;1&quot;</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">//會自動進行類型轉換，通常數字最多</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+<span class="token boolean">true</span> <span class="token operator">==</span> <span class="token string">&quot;1&quot;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+<span class="token keyword">null</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">;</span>  <span class="token comment">//這個比較特別，並非轉數字比較，所以就記下來吧！</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token keyword">undefined</span> <span class="token operator">==</span> <span class="token keyword">null</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+<span class="token number">NaN</span> <span class="token operator">==</span> <span class="token number">NaN</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token number">10</span> <span class="token operator">!=</span> <span class="token number">5</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+<span class="token string">&quot;abcd&quot;</span> <span class="token operator">!=</span> <span class="token string">&quot;abcd&quot;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token string">&quot;123&quot;</span> <span class="token operator">==</span> <span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment">//會自動轉換成相等</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+<span class="token string">&quot;123&quot;</span> <span class="token operator">===</span> <span class="token number">123</span><span class="token punctuation">;</span> <span class="token comment">//三個等於，不會自動類型轉換</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token number">1</span> <span class="token operator">!=</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">;</span> <span class="token comment">//自動轉換，1會等於1</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">false</span>
+
+<span class="token number">1</span> <span class="token operator">!==</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">;</span> <span class="token comment">//不自動轉換類型</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+</code></pre></div><h3 id="使用-isnan-判斷-nan"><a href="#使用-isnan-判斷-nan" class="header-anchor">#</a> 使用 isNaN 判斷 NaN</h3> <blockquote><p><code>isNaN()</code>函數</p></blockquote> <p>判斷一個值是否是 NaN，如果該值是 NaN 則返回 true，否則返回 false。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">NaN</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//判斷b的值是否是NaN</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+</code></pre></div><h2 id="三元運算表達式"><a href="#三元運算表達式" class="header-anchor">#</a> 三元運算表達式</h2> <blockquote><p>條件表達式<code>?</code>語句 1<code>:</code>語句 2;</p></blockquote> <ul><li>條件運算符在執行時，首先對條件表達式進行求值，如果該值為 true，則執行語句 1，並返回執行結果，如果該值為 false，則執行語句 2，並返回執行結果。</li> <li>如果條件的表達式的求值結果是一個非布林值，會將其轉換為布林值然後在運算。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">300</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">143</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> max <span class="token operator">=</span> a <span class="token operator">&gt;</span> b <span class="token operator">?</span> a <span class="token operator">:</span> b<span class="token punctuation">;</span> <span class="token comment">//true返回a</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">300</span>
+
+<span class="token string">&quot;hello&quot;</span><span class="token operator">?</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;語句1&quot;</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;語句2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span>語句<span class="token number">1</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a9c2ee94.js" defer></script><script src="/assets/js/2.a53ace89.js" defer></script><script src="/assets/js/38.fa853fb3.js" defer></script>
+  </body>
+</html>

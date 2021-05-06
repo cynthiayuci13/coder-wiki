@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JS-Object 對象</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.7dceacc5.css" as="style"><link rel="preload" href="/assets/js/app.a9c2ee94.js" as="script"><link rel="preload" href="/assets/js/2.a53ace89.js" as="script"><link rel="preload" href="/assets/js/32.1c3a6409.js" as="script"><link rel="prefetch" href="/assets/js/10.bcb884ce.js"><link rel="prefetch" href="/assets/js/11.9a7061b4.js"><link rel="prefetch" href="/assets/js/12.7b8dbbc1.js"><link rel="prefetch" href="/assets/js/13.412823ef.js"><link rel="prefetch" href="/assets/js/14.250d3fbf.js"><link rel="prefetch" href="/assets/js/15.c2056018.js"><link rel="prefetch" href="/assets/js/16.36fdc8cf.js"><link rel="prefetch" href="/assets/js/17.f39bb899.js"><link rel="prefetch" href="/assets/js/18.bdd601f5.js"><link rel="prefetch" href="/assets/js/19.6ef4cc36.js"><link rel="prefetch" href="/assets/js/20.a15e0dd6.js"><link rel="prefetch" href="/assets/js/21.dcb96758.js"><link rel="prefetch" href="/assets/js/22.ce709f1c.js"><link rel="prefetch" href="/assets/js/23.e4fc0d83.js"><link rel="prefetch" href="/assets/js/24.4bc4fee0.js"><link rel="prefetch" href="/assets/js/25.1a3dc2a8.js"><link rel="prefetch" href="/assets/js/26.79ac193b.js"><link rel="prefetch" href="/assets/js/27.7f9f4f4e.js"><link rel="prefetch" href="/assets/js/28.cbbac56a.js"><link rel="prefetch" href="/assets/js/29.ff4ad2f4.js"><link rel="prefetch" href="/assets/js/3.30ef2a9c.js"><link rel="prefetch" href="/assets/js/30.7df2f0c1.js"><link rel="prefetch" href="/assets/js/31.ddcc8f57.js"><link rel="prefetch" href="/assets/js/33.b552f1c5.js"><link rel="prefetch" href="/assets/js/34.dde8457c.js"><link rel="prefetch" href="/assets/js/35.3fda5f22.js"><link rel="prefetch" href="/assets/js/36.a71da2de.js"><link rel="prefetch" href="/assets/js/37.688fe558.js"><link rel="prefetch" href="/assets/js/38.fa853fb3.js"><link rel="prefetch" href="/assets/js/39.0926dc82.js"><link rel="prefetch" href="/assets/js/4.4a215e9a.js"><link rel="prefetch" href="/assets/js/40.f17000af.js"><link rel="prefetch" href="/assets/js/41.baea77a5.js"><link rel="prefetch" href="/assets/js/42.06257587.js"><link rel="prefetch" href="/assets/js/43.cd76bb14.js"><link rel="prefetch" href="/assets/js/5.3b01fd55.js"><link rel="prefetch" href="/assets/js/6.9748dea1.js"><link rel="prefetch" href="/assets/js/7.051f705c.js"><link rel="prefetch" href="/assets/js/8.282b8d67.js"><link rel="prefetch" href="/assets/js/9.7c9ef602.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7dceacc5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="何謂-object-對象"><a href="#何謂-object-對象" class="header-anchor">#</a> 何謂 Object 對象</h2> <p>在 JS 中來表示一個人的信息(name gender age)<br></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'孫悟空'</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> gender <span class="token operator">=</span> <span class="token string">'男'</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>如果使用基本數據類型的數據，我們所創建的變數都是獨立，不能成為一個整體。</li> <li>對象屬於一種複合的數據類型，在對象中可以保存多個不同數據類型的屬性。</li> <li>對象的分類：
+<ol><li>內建對象
+<ul><li>由 ES 標準中定義的對象，在任何的 ES 的實現中都可以使用</li> <li>比如：Math String Number Boolean Function Object....</li></ul></li> <li>宿主對象
+<ul><li>由 JS 的運行環境提供的對象，目前來講主要指由瀏覽器提供的對象</li> <li>比如 BOM DOM</li></ul></li> <li>自定義對象
+<ul><li>由開發人員自己創建的對象</li></ul></li></ol></li></ul> <h2 id="創建對象"><a href="#創建對象" class="header-anchor">#</a> 創建對象</h2> <ul><li>使用<code>new</code>關鍵字調用的函數，是構造函數 constructor，構造函數是專門用來創建對象的函數。</li> <li>使用 typeof 檢查一個對象時，會返回 object。</li> <li>JS 中的變數都是保存到記憶體中，基本數據類型的值直接在<code>棧內存記憶體</code>中儲存，值與值之間是獨立存在，修改一個變數不會影響其他的變數；而對象是保存到<code>堆內存記憶體</code>中的，每創建一個新的對象，就會在堆記憶體中開出一個新的空間，而變數保存的是對象的<code>記憶體地址(對象的引用)</code>，如果兩個變數保存的是同一個對象引用，當一個通過一個變數修改屬性時，另一個也會受到影響。</li></ul> <p>第一種方式<br>
+單純創建一個空對象</p> <blockquote><p>文法<br>new Objent();</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Objent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>第二種方式<br></p> <ul><li>可以在創建對象時，直接指定對象中的屬性。</li> <li>對象屬性名可以加引號也可以不加，建議不加。</li></ul> <blockquote><p>文法<br>{屬性名:屬性值,屬性名:屬性值....};</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'孫悟空'</span><span class="token punctuation">,</span> <span class="token comment">//'name': '孫悟空'也行</span>
+  gender<span class="token operator">:</span> <span class="token string">'男'</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+  test<span class="token operator">:</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'沙和尚'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">//對象還可以是對象</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="命名屬性"><a href="#命名屬性" class="header-anchor">#</a> 命名屬性</h3> <ul><li><p>對象的屬性名不強制要求遵守標識符的規範，什麼亂七八糟的名字都可以使用，但是我們使用是還是盡量按照標識符的規範去做。</p></li> <li><p>JS 對象的<code>屬性值</code>，可以是<code>任意的數據類型</code>(string/number/boolean/undefind/null)，甚至也可以是一個對象。</p> <ul><li>新增對象中的屬性</li></ul> <blockquote><p>文法<br>對象.屬性名 = 屬性值;</p></blockquote> <ul><li>讀取對象中的屬性，如果讀取對象中沒有的屬性，不會報錯而是會返回<code>undefined</code>。</li></ul> <blockquote><p>文法<br>對象.屬性名</p></blockquote> <ul><li>修改對象中的屬性。</li></ul> <blockquote><p>文法<br>對象.屬性名=屬性值</p></blockquote> <ul><li>刪除對象中的屬性。</li></ul> <blockquote><p>文法<br>delete 對象.屬性名</p></blockquote></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+結果<span class="token operator">==</span><span class="token operator">&gt;</span>會是一個空的對象<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">{}</span><span class="token template-punctuation string">`</span></span>
+
+<span class="token comment">//obj中添加一個name屬性、gender屬性、age屬性</span>
+obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;孫悟空&quot;</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span>gender <span class="token operator">=</span> <span class="token string">&quot;男&quot;</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">{name: &quot;孫悟空&quot;, gender: &quot;男&quot;, age: 18}</span><span class="token template-punctuation string">`</span></span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">孫悟空</span><span class="token template-punctuation string">`</span></span>
+
+<span class="token comment">//舊值修改為新值</span>
+obj<span class="token punctuation">.</span>name <span class="token operator">=</span><span class="token string">'YuciChen'</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">YuciChen</span><span class="token template-punctuation string">`</span></span>
+
+<span class="token comment">//刪除</span>
+<span class="token keyword">delete</span> obj<span class="token punctuation">.</span>name
+</code></pre></div><h3 id="更靈活屬性名"><a href="#更靈活屬性名" class="header-anchor">#</a> 更靈活屬性名</h3> <p>使用<code>[]</code>這種形式去操作屬性，更加的靈活，可以直接傳遞一個<code>變數</code>，這樣變數值是多少就會讀取那個屬性。</p> <blockquote><p>文法<br>對象[&quot;屬性名&quot;] = 屬性值</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code>obj<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'yuci'</span><span class="token punctuation">;</span>
+
+<span class="token comment">//將屬性名放入一個變數讀取</span>
+<span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token string">'name'</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="檢查對象中是否有此屬性"><a href="#檢查對象中是否有此屬性" class="header-anchor">#</a> 檢查對象中是否有此屬性</h3> <p>通過該運算符可以檢查一個對象中是否含有指定的屬性，如果有則返回 true，沒有則返回 false。</p> <blockquote><p>文法<br>&quot;屬性名&quot; in 對象</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> obj<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">[</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'yuci'</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;name&quot;</span> <span class="token keyword">in</span> obj<span class="token punctuation">)</span>
+
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token boolean">true</span>
+
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span><span class="token string">&quot;孫悟空&quot;</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span><span class="token number">18</span><span class="token punctuation">,</span>
+  gender<span class="token operator">:</span><span class="token string">&quot;男&quot;</span><span class="token punctuation">,</span>
+  address<span class="token operator">:</span><span class="token string">&quot;花果山&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> n <span class="token keyword">in</span> obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;屬性名:&quot;</span><span class="token operator">+</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;屬性值:&quot;</span><span class="token operator">+</span>obj<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+結果<span class="token operator">==</span><span class="token operator">&gt;</span>
+屬性名 name
+屬性名 age
+屬性名 gender
+屬性名 address
+
+結果<span class="token operator">==</span><span class="token operator">&gt;</span>
+屬性值 孫悟空
+屬性值 <span class="token number">18</span>
+屬性值 男
+屬性值 花果山
+</code></pre></div><h2 id="對象函數"><a href="#對象函數" class="header-anchor">#</a> 對象函數</h2> <ul><li>對象的屬性值可以是任何的數據類型，也可以是個函數。</li> <li>函數也可以稱為對象的屬性，如果一個函數作為一個對象的屬性保存，調用這個函數就說調用對象的方法(method)。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'孫悟空'</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span><span class="token function-variable function">sayname</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">//調用方法</span>
+obj<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">--</span><span class="token operator">-</span>
+
+<span class="token keyword">var</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'豬八戒'</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">sayName</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+obj2<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="優化-使用工廠模式來創建對象"><a href="#優化-使用工廠模式來創建對象" class="header-anchor">#</a> 優化-使用工廠模式來創建對象</h2> <p>透過參數傳入，就可以創建批量的對象</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//傳入name,age,gender參數</span>
+<span class="token keyword">function</span> <span class="token function">createPerson</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> gender</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//創建一個新的對象</span>
+  <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">//添加屬性</span>
+  obj<span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span> <span class="token comment">//參數</span>
+  obj<span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+  obj<span class="token punctuation">.</span>gender <span class="token operator">=</span> gender<span class="token punctuation">;</span>
+
+  <span class="token comment">//將對象返回</span>
+  <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">createDog</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  obj<span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  obj<span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+  obj<span class="token punctuation">.</span><span class="token function-variable function">sayHello</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'汪汪~~'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> obj2 <span class="token operator">=</span> <span class="token function">createPerson</span><span class="token punctuation">(</span><span class="token string">'yuci'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">'女'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj3 <span class="token operator">=</span> <span class="token function">createPerson</span><span class="token punctuation">(</span><span class="token string">'john'</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token string">'男'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> dog <span class="token operator">=</span> <span class="token function">createDog</span><span class="token punctuation">(</span><span class="token string">'奶蓋'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>此圖無法區分對象，到底是人還是狗？</p> <p><img src="/doc-img/2021-02-06-00-02-57.png" alt=""></p> <h2 id="優化-構造函數"><a href="#優化-構造函數" class="header-anchor">#</a> 優化-構造函數</h2> <p>依據上方使用工廠模式來創建對象，可以更加方便創建批量的對象，可是會有一個缺點是無法區分對象，例如創建人的對象與動物對象。此時可以透過構造函數來將對象進行分類。</p> <ul><li>構造函數就是一個普通的函數，創建方式和普通函數沒有區別。</li> <li>不同的是構造函數習慣上<code>首字母大寫</code>。</li> <li>普通函數是直接調用，而構造函數需要使用 <code>new 關鍵字</code>來調用。</li> <li>使用同一個構造函數創建的對象，我們稱為一類對象。</li> <li>我們將通過一個構造函數創建的對象，稱為是該類的實例。</li></ul> <h4 id="構造函數的執行流程"><a href="#構造函數的執行流程" class="header-anchor">#</a> 構造函數的執行流程</h4> <ol><li>立刻創建一個新的對象。</li> <li>將新建的對象設定為函數中 this，在構造函數中可以使用 this 來引用新建的對象。</li> <li>逐行執行函數中的代碼。</li> <li>將新建的對象作為返回值返回。</li></ol> <h4 id="this-不同情況"><a href="#this-不同情況" class="header-anchor">#</a> this 不同情況</h4> <ol><li>當以函數的形式調用時，this 是 window。</li> <li>當以方法的形式調用時，誰調用方法 this 就是誰。</li> <li>當以構造函數的形式調用時，this 就是新創建的那個對象。</li></ol> <p>範例：創建一個構造函數，專門用來創建 Person 與 Dog 對象</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//創建Person對象</span>
+<span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> gender</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>gender <span class="token operator">=</span> gender<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">sayName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//創建Dog對象</span>
+<span class="token keyword">function</span> <span class="token function">Dog</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//創建Person實例</span>
+<span class="token keyword">var</span> per <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'Yuci'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">'女'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> per2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token string">'男'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> per3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">'Mary'</span><span class="token punctuation">,</span> <span class="token number">38</span><span class="token punctuation">,</span> <span class="token string">'女'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//創建Dog實例</span>
+<span class="token keyword">var</span> dog1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">'奶蓋'</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>per<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>per2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>per3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>此圖為 console.log 結果，會看到對象有被區分了
+<img src="/doc-img/2021-02-05-23-58-11.png" alt=""></p> <h2 id="instanceof-實例檢查"><a href="#instanceof-實例檢查" class="header-anchor">#</a> instanceof 實例檢查</h2> <ul><li>檢查一個對象是否是一個類的實例，如果是，則返回 true，否則返回 false。</li> <li>所有的對象都是 Object 的後代，所以任何對象和 Object 左 instanceof 檢查時都會返回 true。</li></ul> <blockquote><p>文法<br>對象 instanceof 構造函數</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>per <span class="token keyword">instanceof</span> <span class="token class-name">Person</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token parameter">結果</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1 <span class="token keyword">instanceof</span> <span class="token class-name">Person</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token parameter">結果</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog1 <span class="token keyword">instanceof</span> <span class="token class-name">Dog</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token parameter">結果</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dog <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token parameter">結果</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="優化-構造函數內建方法"><a href="#優化-構造函數內建方法" class="header-anchor">#</a> 優化-構造函數內建方法</h2> <ul><li>目前我們的方法是在構造函數內部創建的，也就是構造函數每執行一次就會創建一個新的 sayName 方法，也是所有實例的 sayName 都是唯一的。這樣就導致構造函數執行一次就會創建一個新的方法，執行 10000 次就會創建 10000 個新的方法，而 10000 個方法都是一摸一樣的</li> <li>思考如何完全可以<code>使所有的對象共享同一個方法</code>，請接續 phototype 原型對象了解寫在全局的缺點...回來改寫。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> gender</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// this.sayName = function() {</span>
+  <span class="token comment">//   alert(this.name);</span>
+  <span class="token comment">// };</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>sayName <span class="token operator">=</span> fun<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//將sayName方法在全局作用域中定義</span>
+<span class="token keyword">function</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//將sayName方法改為在Person構造函數之原型對象裡面</span>
+<span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sayName</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="清理暫存垃圾"><a href="#清理暫存垃圾" class="header-anchor">#</a> 清理暫存垃圾</h2> <ul><li>當一個對象沒有任何的變數或屬性對它進行引用，這種對象已不在使用，但卻會佔用大量的記憶體空間，導緻程式運行變慢。</li> <li>在 JS 中擁有自動的垃圾回收機製，會自動將這些垃圾對象從記憶體中銷毀，我們不需要也不能進行垃圾回收的操作。我們需要做的只是要將不再使用的對象設定 <code>null</code>即可。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//對對象進行各種操作。。。。</span>
+obj <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a9c2ee94.js" defer></script><script src="/assets/js/2.a53ace89.js" defer></script><script src="/assets/js/32.1c3a6409.js" defer></script>
+  </body>
+</html>

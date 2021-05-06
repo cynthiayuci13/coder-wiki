@@ -9,7 +9,7 @@ subSidebar: 'auto'
 
 ## 參考資源
 
-[VuePress 官網](https://v1.vuepress.vuejs.org/zh/)<br>
+[VuePress 官網](https://vuepress.vuejs.org/zh/)<br>
 [VuePress-markdown 教學](https://v1.vuepress.vuejs.org/zh/guide/markdown.html#%E9%93%BE%E6%8E%A5)
 
 ## 文章摘要

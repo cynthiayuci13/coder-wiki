@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS-Transform</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.7dceacc5.css" as="style"><link rel="preload" href="/assets/js/app.a9c2ee94.js" as="script"><link rel="preload" href="/assets/js/2.a53ace89.js" as="script"><link rel="preload" href="/assets/js/23.e4fc0d83.js" as="script"><link rel="prefetch" href="/assets/js/10.bcb884ce.js"><link rel="prefetch" href="/assets/js/11.9a7061b4.js"><link rel="prefetch" href="/assets/js/12.7b8dbbc1.js"><link rel="prefetch" href="/assets/js/13.412823ef.js"><link rel="prefetch" href="/assets/js/14.250d3fbf.js"><link rel="prefetch" href="/assets/js/15.c2056018.js"><link rel="prefetch" href="/assets/js/16.36fdc8cf.js"><link rel="prefetch" href="/assets/js/17.f39bb899.js"><link rel="prefetch" href="/assets/js/18.bdd601f5.js"><link rel="prefetch" href="/assets/js/19.6ef4cc36.js"><link rel="prefetch" href="/assets/js/20.a15e0dd6.js"><link rel="prefetch" href="/assets/js/21.dcb96758.js"><link rel="prefetch" href="/assets/js/22.ce709f1c.js"><link rel="prefetch" href="/assets/js/24.4bc4fee0.js"><link rel="prefetch" href="/assets/js/25.1a3dc2a8.js"><link rel="prefetch" href="/assets/js/26.79ac193b.js"><link rel="prefetch" href="/assets/js/27.7f9f4f4e.js"><link rel="prefetch" href="/assets/js/28.cbbac56a.js"><link rel="prefetch" href="/assets/js/29.ff4ad2f4.js"><link rel="prefetch" href="/assets/js/3.30ef2a9c.js"><link rel="prefetch" href="/assets/js/30.7df2f0c1.js"><link rel="prefetch" href="/assets/js/31.ddcc8f57.js"><link rel="prefetch" href="/assets/js/32.1c3a6409.js"><link rel="prefetch" href="/assets/js/33.b552f1c5.js"><link rel="prefetch" href="/assets/js/34.dde8457c.js"><link rel="prefetch" href="/assets/js/35.3fda5f22.js"><link rel="prefetch" href="/assets/js/36.a71da2de.js"><link rel="prefetch" href="/assets/js/37.688fe558.js"><link rel="prefetch" href="/assets/js/38.fa853fb3.js"><link rel="prefetch" href="/assets/js/39.0926dc82.js"><link rel="prefetch" href="/assets/js/4.4a215e9a.js"><link rel="prefetch" href="/assets/js/40.f17000af.js"><link rel="prefetch" href="/assets/js/41.baea77a5.js"><link rel="prefetch" href="/assets/js/42.06257587.js"><link rel="prefetch" href="/assets/js/43.cd76bb14.js"><link rel="prefetch" href="/assets/js/5.3b01fd55.js"><link rel="prefetch" href="/assets/js/6.9748dea1.js"><link rel="prefetch" href="/assets/js/7.051f705c.js"><link rel="prefetch" href="/assets/js/8.282b8d67.js"><link rel="prefetch" href="/assets/js/9.7c9ef602.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7dceacc5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="transform-變形"><a href="#transform-變形" class="header-anchor">#</a> transform 變形</h2> <ol><li>用來設定元素的變形效果，包含形狀或位置。</li> <li>變形不會影響到頁面的佈局。</li> <li>平移元素，若是使用百分比(%)，是依據元素本身寬度計算。</li> <li>要注意多屬性時，先後順序也會影響變形效果</li></ol> <h4 id="value-值"><a href="#value-值" class="header-anchor">#</a> Value 值</h4> <table><thead><tr><th>用法 <div style="width:200px;"></div></th> <th>說明 <div style="width:200px;"></div></th> <th>備註</th></tr></thead> <tbody><tr><td>translateX()</td> <td>沿著 x 軸方向平移</td> <td></td></tr> <tr><td>translateY()</td> <td>沿著 y 軸方向平移</td> <td></td></tr> <tr><td>translateZ()</td> <td>搭配 perspective</td> <td></td></tr> <tr><td>rotateX()</td> <td>沿著 x 軸方向旋轉</td> <td></td></tr> <tr><td>rotateY()</td> <td>沿著 y 軸方向旋轉</td> <td></td></tr> <tr><td>rotateZ()</td> <td>沿著 z 軸方向旋轉</td> <td></td></tr> <tr><td>scaleX()</td> <td>水平方向縮放</td> <td></td></tr> <tr><td>scaleY()</td> <td>垂直方向縮放</td> <td></td></tr> <tr><td>scale()</td> <td>雙方向的縮放</td> <td></td></tr></tbody></table> <h4 id="其它搭配使用"><a href="#其它搭配使用" class="header-anchor">#</a> 其它搭配使用</h4> <table><thead><tr><th>用法 <div style="width:150px;"></div></th> <th>說明</th> <th>值 <div style="width:250px;"></div></th></tr></thead> <tbody><tr><td>transform-style</td> <td>設定 3d 變形效果，搭配 3D 效果使用</td> <td>preserve-3d</td></tr> <tr><td>transform-origin</td> <td>設定變形的原點</td> <td>center(預設)</td></tr> <tr><td>backface-visibility</td> <td>是否顯示元素的背面</td> <td>hidden</td></tr> <tr><td>perspective</td> <td>人眼距離網頁的距離，屬於立體效果(近大遠小)，預設情況下網頁是不支援透視，如果需要看見效果，必須要設定網頁的視距</td> <td>數值</td></tr></tbody></table> <h4 id="程式碼撰寫範例"><a href="#程式碼撰寫範例" class="header-anchor">#</a> 程式碼撰寫範例</h4> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">.box </span><span class="token punctuation">{</span>
+  <span class="token comment">/* 應用-平移(translate)／旋轉(rotate) */</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>-100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>50%<span class="token punctuation">)</span> <span class="token function">translateY</span><span class="token punctuation">(</span>100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span>0.25turn<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//1trun=360deg</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>180deg<span class="token punctuation">)</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>400px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>400px<span class="token punctuation">)</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>180deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateX</span><span class="token punctuation">(</span>-180deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/* 設計變形的原點-預設值center*/</span>
+  <span class="token property">transform-origin</span><span class="token punctuation">:</span> 20px 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="如何處理-z-軸"><a href="#如何處理-z-軸" class="header-anchor">#</a> 如何處理 Z 軸</h4> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">html </span><span class="token punctuation">{</span>
+  <span class="token comment">/* 設定當前網頁的視距為800px */</span>
+  <span class="token property">perspective</span><span class="token punctuation">:</span> 800px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.box1 </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #bfa<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 200px auto<span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> 2s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">body:hover .box1 </span><span class="token punctuation">{</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateZ</span><span class="token punctuation">(</span>100px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="transform-排版居中"><a href="#transform-排版居中" class="header-anchor">#</a> transform 排版居中</h3> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">.box </span><span class="token punctuation">{</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span> <span class="token function">translateY</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="差異-position-排版居中"><a href="#差異-position-排版居中" class="header-anchor">#</a> [差異]position 排版居中</h3> <p>雖然這個也可以達成居中排版，但這適合於元素的大小當有確定時。</p> <div class="language-scss extra-class"><div class="highlight-lines"><br><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><br><br><br></div><pre class="language-scss"><code><span class="token selector">.box </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> <span class="token comment">//要有這個</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> <span class="token comment">//要有這個</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="範例-翻牌效果"><a href="#範例-翻牌效果" class="header-anchor">#</a> [範例]翻牌效果</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>box1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>image.jpg<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>翻牌圖片<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-scss extra-class"><div class="highlight-lines"><br><div class="highlighted"> </div><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><br></div><pre class="language-scss"><code><span class="token selector">html </span><span class="token punctuation">{</span>
+  <span class="token property">perspective</span><span class="token punctuation">:</span> 800px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.box1 </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 320px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 320px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #bfa<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 200px auto<span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> 2s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">body:hover .box1 </span><span class="token punctuation">{</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateY</span><span class="token punctuation">(</span>180deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">backface-visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="範例-圖片縮放效果"><a href="#範例-圖片縮放效果" class="header-anchor">#</a> [範例]圖片縮放效果</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>img-wrapper<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>image.jpg<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">.img-wrapper </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px red solid<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">img </span><span class="token punctuation">{</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> 0.2s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.img-wrapper:hover img </span><span class="token punctuation">{</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a9c2ee94.js" defer></script><script src="/assets/js/2.a53ace89.js" defer></script><script src="/assets/js/23.e4fc0d83.js" defer></script>
+  </body>
+</html>

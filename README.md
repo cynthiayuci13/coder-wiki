@@ -16,5 +16,5 @@ heroImageStyle:
 bgImageStyle: { height: '450px' }
 isShowTitleInHome: false
 actionText: Look More
-actionLink: /docs/frontend/
+actionLink: /docs/css/
 ---

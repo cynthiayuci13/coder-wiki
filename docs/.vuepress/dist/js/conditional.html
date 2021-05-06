@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JS-條件式</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.7dceacc5.css" as="style"><link rel="preload" href="/assets/js/app.a9c2ee94.js" as="script"><link rel="preload" href="/assets/js/2.a53ace89.js" as="script"><link rel="preload" href="/assets/js/28.cbbac56a.js" as="script"><link rel="prefetch" href="/assets/js/10.bcb884ce.js"><link rel="prefetch" href="/assets/js/11.9a7061b4.js"><link rel="prefetch" href="/assets/js/12.7b8dbbc1.js"><link rel="prefetch" href="/assets/js/13.412823ef.js"><link rel="prefetch" href="/assets/js/14.250d3fbf.js"><link rel="prefetch" href="/assets/js/15.c2056018.js"><link rel="prefetch" href="/assets/js/16.36fdc8cf.js"><link rel="prefetch" href="/assets/js/17.f39bb899.js"><link rel="prefetch" href="/assets/js/18.bdd601f5.js"><link rel="prefetch" href="/assets/js/19.6ef4cc36.js"><link rel="prefetch" href="/assets/js/20.a15e0dd6.js"><link rel="prefetch" href="/assets/js/21.dcb96758.js"><link rel="prefetch" href="/assets/js/22.ce709f1c.js"><link rel="prefetch" href="/assets/js/23.e4fc0d83.js"><link rel="prefetch" href="/assets/js/24.4bc4fee0.js"><link rel="prefetch" href="/assets/js/25.1a3dc2a8.js"><link rel="prefetch" href="/assets/js/26.79ac193b.js"><link rel="prefetch" href="/assets/js/27.7f9f4f4e.js"><link rel="prefetch" href="/assets/js/29.ff4ad2f4.js"><link rel="prefetch" href="/assets/js/3.30ef2a9c.js"><link rel="prefetch" href="/assets/js/30.7df2f0c1.js"><link rel="prefetch" href="/assets/js/31.ddcc8f57.js"><link rel="prefetch" href="/assets/js/32.1c3a6409.js"><link rel="prefetch" href="/assets/js/33.b552f1c5.js"><link rel="prefetch" href="/assets/js/34.dde8457c.js"><link rel="prefetch" href="/assets/js/35.3fda5f22.js"><link rel="prefetch" href="/assets/js/36.a71da2de.js"><link rel="prefetch" href="/assets/js/37.688fe558.js"><link rel="prefetch" href="/assets/js/38.fa853fb3.js"><link rel="prefetch" href="/assets/js/39.0926dc82.js"><link rel="prefetch" href="/assets/js/4.4a215e9a.js"><link rel="prefetch" href="/assets/js/40.f17000af.js"><link rel="prefetch" href="/assets/js/41.baea77a5.js"><link rel="prefetch" href="/assets/js/42.06257587.js"><link rel="prefetch" href="/assets/js/43.cd76bb14.js"><link rel="prefetch" href="/assets/js/5.3b01fd55.js"><link rel="prefetch" href="/assets/js/6.9748dea1.js"><link rel="prefetch" href="/assets/js/7.051f705c.js"><link rel="prefetch" href="/assets/js/8.282b8d67.js"><link rel="prefetch" href="/assets/js/9.7c9ef602.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7dceacc5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="if-條件式語句"><a href="#if-條件式語句" class="header-anchor">#</a> if 條件式語句</h2> <p>if 語句在執行時，會先對條件表達式進行求值判斷，如果條件表達式的值為 true，則執行 if 後的語句，如果條件表達式的值為 false，則不會執行 if 後的語句。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* 文法一 */</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>條件表達式<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  語句<span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 文法二 */</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>條件表達式<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  語句<span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+  語句<span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 文法三 */</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>條件表達式<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  語句<span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">{</span>
+  語句<span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">{</span>
+  語句<span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">{</span>
+  語句<span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+  語句<span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//這樣的寫法會遇到一個問題，年齡90，在第一個條件式就成立了，所以不會在到䈗面更符合的條件。</span>
+age <span class="token operator">=</span> <span class="token number">90</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&gt;</span> <span class="token number">17</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你已經成年了'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&gt;</span> <span class="token number">30</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你已經中年了'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&gt;</span> <span class="token number">60</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你已經退休了'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你歲數挺大的了~~'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//上方問題改寫後</span>
+age <span class="token operator">=</span> <span class="token number">90</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&gt;</span> <span class="token number">17</span> <span class="token operator">&amp;&amp;</span> age <span class="token operator">&lt;=</span> <span class="token number">30</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你已經成年了'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&gt;</span> <span class="token number">30</span> <span class="token operator">&amp;&amp;</span> age <span class="token operator">&lt;=</span> <span class="token number">60</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你已經中年了'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&gt;</span> <span class="token number">60</span> <span class="token operator">&amp;&amp;</span> age <span class="token operator">&lt;=</span> <span class="token number">80</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你已經退休了'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你歲數挺大的了~~'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="練習一"><a href="#練習一" class="header-anchor">#</a> 練習一</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//prompt 彈出輸入視窗</span>
+<span class="token keyword">var</span> score <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">'請輸入你的期末成績(0-100)：'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//防呆考量：使用者可能會輸入超過100或小於0的數字／輸入非數字isNaN</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>score <span class="token operator">&gt;</span> <span class="token number">100</span> <span class="token operator">||</span> score <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> <span class="token function">isNaN</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你輸入不正確的分數，請重新輸入'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>score <span class="token operator">==</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'送你一輛BMW'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>score <span class="token operator">&gt;=</span> <span class="token number">80</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'送你一台iphone'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>score <span class="token operator">&gt;=</span> <span class="token number">60</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'送你一本書'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你的成績不及格，沒有獎勵'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="switch-條件式語句"><a href="#switch-條件式語句" class="header-anchor">#</a> switch 條件式語句</h2> <ul><li>如果比較結果為 true，則從當前 case 處開始執行代碼。當前 case 後的所有的代碼都會執行。</li> <li>我們可以在 case 的後面加上一個 <code>break</code> 關鍵字，這樣可以確保會執行當前 case 語句後跳出，而不會執行其他的 case。</li> <li>如果比較結果為 false，則繼續向下比較。</li> <li>如果所有的比較結果都為 <code>false</code>，則執行 <code>default</code> 後的語句。</li> <li>switch 語句和 if 語句的功能實際上有重複的，使用 switch 可以實現 if 的功能，同樣使用 if 也可以實現 switch 的功能，所以我們使用時，可以根據自己的習慣選擇。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* 文法 */</span>
+<span class="token keyword">switch</span><span class="token punctuation">(</span>條件表達式<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">case</span> 表達式<span class="token operator">:</span>
+    語句<span class="token operator">...</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token keyword">case</span> 表達式<span class="token operator">:</span>
+    語句<span class="token operator">...</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token keyword">default</span><span class="token operator">:</span>
+    語句<span class="token operator">...</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* 第一種寫法 */</span>
+<span class="token keyword">var</span> score <span class="token operator">=</span> <span class="token number">33</span><span class="token punctuation">;</span>
+<span class="token comment">//使用parseInt將及格條件範圍縮小成5個條件，其餘default不及格</span>
+<span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token function">parseInt</span><span class="token punctuation">(</span>score <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">case</span> <span class="token number">10</span><span class="token operator">:</span>
+  <span class="token keyword">case</span> <span class="token number">9</span><span class="token operator">:</span>
+  <span class="token keyword">case</span> <span class="token number">8</span><span class="token operator">:</span>
+  <span class="token keyword">case</span> <span class="token number">7</span><span class="token operator">:</span>
+  <span class="token keyword">case</span> <span class="token number">6</span><span class="token operator">:</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'及格'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token keyword">default</span><span class="token operator">:</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'不及格'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 第二種寫法 */</span>
+<span class="token keyword">var</span> score <span class="token operator">=</span> <span class="token number">99</span><span class="token punctuation">;</span>
+<span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">case</span> score <span class="token operator">&gt;=</span> <span class="token number">60</span><span class="token operator">:</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'及格'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token keyword">default</span><span class="token operator">:</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'不及格'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="while-循環語句"><a href="#while-循環語句" class="header-anchor">#</a> while 循環語句</h2> <p>創建一個循環，往往需要三個步驟：<br></p> <ol><li>創初始化一個變數。</li> <li>在循環中設定一個條件表達式。</li> <li>定義一個更新表達式，每次更新初始化變數。</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* 文法 */</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>條件表達式<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  語句<span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//1.創初始化一個變數</span>
+<span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token comment">//2.在循環中設定一個條件表達式</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//3.定義一個更新表達式，每次更新初始化變數</span>
+  i<span class="token operator">++</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'i:'</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="練習一-投資年利率"><a href="#練習一-投資年利率" class="header-anchor">#</a> 練習一 投資年利率</h3> <p>假如投資的年利率為 5%，試求從 1000 塊增長到 5000 塊，需要花費多少年</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> money <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span> <span class="token comment">//定義初期存款金額</span>
+<span class="token keyword">var</span> year <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//定義初期年</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>money <span class="token operator">&lt;</span> <span class="token number">5000</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  money <span class="token operator">=</span> money <span class="token operator">*</span> <span class="token number">1.05</span><span class="token punctuation">;</span>
+  year<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'已存了多少錢'</span><span class="token punctuation">,</span> money<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'一共需要幾年才能存到'</span><span class="token punctuation">,</span> year<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="練習二-改良-if-範例版本"><a href="#練習二-改良-if-範例版本" class="header-anchor">#</a> 練習二(改良 if 範例版本)</h3> <p>增加 循環判斷，當輸入錯誤時，應該要提供重新輸入</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//prompt 彈出輸入視窗</span>
+  <span class="token keyword">var</span> score <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">'請輸入你的期末成績(0-100)：'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//假如輸入在正確數值範圍，則離開循環</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>score <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> score <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//若輸入錯誤，給予錯誤提示</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你輸入不正確的分數，請重新輸入'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//防呆考量：使用者可能會輸入超過100或小於0的數字／輸入非數字isNaN</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>score <span class="token operator">&gt;</span> <span class="token number">100</span> <span class="token operator">||</span> score <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> <span class="token function">isNaN</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>score <span class="token operator">==</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'送你一輛BMW'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>score <span class="token operator">&gt;=</span> <span class="token number">80</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'送你一台iphone'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>score <span class="token operator">&gt;=</span> <span class="token number">60</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'送你一本書'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你的成績不及格，沒有獎勵'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="for-循環語句"><a href="#for-循環語句" class="header-anchor">#</a> for 循環語句</h2> <p>在 for 循環中，一樣也分成三個步驟<br></p> <ol><li>初始化表達式</li> <li>條件表達式</li> <li>更新表達式</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* 文法 */</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span>初始化表達式<span class="token punctuation">;</span>條件表達式<span class="token punctuation">;</span>更新表達式<span class="token punctuation">)</span><span class="token punctuation">{</span>
+   語句<span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="練習一-奇數之和"><a href="#練習一-奇數之和" class="header-anchor">#</a> 練習一 奇數之和</h3> <p>列印 1-100 之間所有奇數之和</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//宣告總和變數</span>
+<span class="token keyword">var</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token comment">//循環</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//假如除2不會整除有餘數，就代表是奇數</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    sum <span class="token operator">=</span> sum <span class="token operator">+</span> i<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'1到100奇數總和：'</span><span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">2500</span>
+</code></pre></div><h3 id="練習二-7-倍數個數及總和"><a href="#練習二-7-倍數個數及總和" class="header-anchor">#</a> 練習二 7 倍數個數及總和</h3> <p>列印 1-100 之間所有 7 的倍數的個數及總和</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">7</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    sum <span class="token operator">=</span> sum <span class="token operator">+</span> i<span class="token punctuation">;</span>
+    count<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'7的倍數總和：'</span><span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'7的倍數字共有幾個：'</span><span class="token punctuation">,</span> count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+總和結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">735</span>
+個數結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">14</span>
+</code></pre></div><h3 id="練習三-水仙花數"><a href="#練習三-水仙花數" class="header-anchor">#</a> 練習三 水仙花數</h3> <p>水仙花數是指一個 3 位數，它的每個位上的數字的 3 次冪之和等於它本身。<br>
+例如：1^3 + 5^3 + 3^3 = 153，請列印所有的水仙花數。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">999</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//獲取百位數字</span>
+  <span class="token keyword">var</span> bai <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>i <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//獲取十位數字</span>
+  <span class="token keyword">var</span> shi <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token punctuation">(</span>i <span class="token operator">-</span> bai <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//獲取個位數字</span>
+  <span class="token keyword">var</span> ge <span class="token operator">=</span> i <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">;</span>
+  <span class="token comment">//計算水仙花數</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>bai <span class="token operator">*</span> bai <span class="token operator">*</span> bai <span class="token operator">+</span> shi <span class="token operator">*</span> shi <span class="token operator">*</span> shi <span class="token operator">+</span> ge <span class="token operator">*</span> ge <span class="token operator">*</span> ge <span class="token operator">==</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// console.log('百位數字：', bai);</span>
+  <span class="token comment">// console.log('十位數字：', shi);</span>
+  <span class="token comment">// console.log('個位數字：', ge);</span>
+<span class="token punctuation">}</span>
+結果<span class="token operator">==</span><span class="token operator">&gt;</span><span class="token number">153.370</span><span class="token number">.371</span><span class="token number">.407</span>
+</code></pre></div><h3 id="練習四-質數"><a href="#練習四-質數" class="header-anchor">#</a> 練習四 質數</h3> <p>在頁面中接收一個用戶輸入的數字，並判斷該數是否是質數。<br>
+能被 1 和自身以外的數法整除的數字就稱為<code>質數</code>，1 不是質數也不是合數，質數必須是大於 1 的自然數。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">'請輸入一個數字來判斷是不為質數：'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//宣告預設判斷質數為true</span>
+<span class="token keyword">var</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+<span class="token comment">//防呆機制，輸入數字不得為1</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>num <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'請輸入&gt;1的數字'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token comment">//判斷是否為質數</span>
+  <span class="token comment">//因為不能輸入1，所以從2開始(2-num)</span>
+  <span class="token comment">//例如輸入5，就要與(2/3/4)相除，看是否能被整除</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> num<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//接下來判斷num是否能被i整除</span>
+    <span class="token comment">//可是思考一下為什麼不是使用 !=0</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>num <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//會被整除就不是質數</span>
+      flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+      <span class="token comment">//一旦進入判斷，則證明i不可能是質數了，此時循環再執行已經沒有任何意義了，使用break來結束循環</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span>num <span class="token operator">+</span> <span class="token string">'為質數'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span>num <span class="token operator">+</span> <span class="token string">'不是質數'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="練習五-打印-圖形"><a href="#練習五-打印-圖形" class="header-anchor">#</a> 練習五 打印*圖形</h3> <p>打印以下圖形</p> <div class="language-text extra-class"><pre class="language-text"><code>*
+**
+***
+****
+*****
+
+*****
+****
+***
+**
+*
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'*'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;br&gt;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">5</span> <span class="token operator">-</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'*'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;br&gt;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="練習六-99-乘法表"><a href="#練習六-99-乘法表" class="header-anchor">#</a> 練習六 99 乘法表</h3> <p>列印 99 乘法表</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">9</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>
+      <span class="token string">'&lt;span style=&quot;margin-right:10px&quot;&gt;'</span> <span class="token operator">+</span> j <span class="token operator">+</span> <span class="token string">'*'</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">'='</span> <span class="token operator">+</span> i <span class="token operator">*</span> j <span class="token operator">+</span> <span class="token string">'&lt;/span&gt;'</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;br&gt;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="補充-break-觀念"><a href="#補充-break-觀念" class="header-anchor">#</a> 補充-break 觀念</h2> <ol><li><code>break</code> 關鍵字可以用來退出 switch 或循環語句，不能在 if 語句中使用。</li> <li>break 關鍵字，會立即終止離他最近的那個循環語句。</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">//為何這裡可以在if語句中使用，是因為這裡的break是影響外層for循環</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'@外層循環'</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//離這層最近，所以立即終止這個循環</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'內層循環:'</span> <span class="token operator">+</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="補充-continue-觀念"><a href="#補充-continue-觀念" class="header-anchor">#</a> 補充-continue 觀念</h2> <ol><li>if 語句中也不能使用。</li> <li>continue 關鍵字可以用來跳過當次循環，同樣 continue 也是預設只會對離他最近的循環循環起作用。</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//跳過當次循環</span>
+    <span class="token keyword">continue</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="補充-優化程式碼讀取時間"><a href="#補充-優化程式碼讀取時間" class="header-anchor">#</a> 補充-優化程式碼讀取時間</h2> <ol><li>使用開頭<code>console.time('字串名稱')</code>與結尾<code>console.timeEnd('字串名稱')</code>，字串名稱頭與尾都要相同，否則會跑不出來。</li> <li>可以拿來測試加上 break 前後時間是否有所差異。</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//開頭加上console.time</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'測試讀取時間'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">10000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    sum <span class="token operator">=</span> sum <span class="token operator">+</span> i<span class="token punctuation">;</span>
+    <span class="token comment">//測試有加break與沒加break前後時間差異</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//結束加上console.timeEnd</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'測試讀取時間'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token parameter">測試結果</span><span class="token operator">=&gt;</span>有差！
+</code></pre></div><h2 id="補充-math-sqrt"><a href="#補充-math-sqrt" class="header-anchor">#</a> 補充 Math.sqrt()</h2> <blockquote><p><code>Math.sqrt()</code>，開立平方根</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//列印2-100之間所有的數</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token comment">//原本要判斷100的數字，現在使用平方減少所有數字都要判斷，例如100就只要檢到2-10數字即可</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> j <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//如果是質數，則列印i的值</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//console.log(i);</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a9c2ee94.js" defer></script><script src="/assets/js/2.a53ace89.js" defer></script><script src="/assets/js/28.cbbac56a.js" defer></script>
+  </body>
+</html>
