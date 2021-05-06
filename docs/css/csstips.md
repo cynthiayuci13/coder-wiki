@@ -213,3 +213,13 @@ td {
   text-indent: -6em;
 }
 ```
+
+## 網頁跑版檢測小技巧
+
+可以使用 outline 外框線來讓各圖層的排版是否正常，以方便查看跑版問題。
+
+```scss
+* {
+  outline: 1px solid red;
+}
+```

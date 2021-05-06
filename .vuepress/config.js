@@ -1,6 +1,6 @@
 module.exports = {
   title: "Yuci's CoderWiki ", //網站標題
-  description: '',
+  // description: '',
   dest: './dist',
   base: '/',
   head: [
@@ -78,31 +78,31 @@ module.exports = {
     },
     type: 'home',
     // 部落格設定
-    blogConfig: {
-      category: {
-        location: 2, // 在導航欄菜單中所佔的位置，預設2
-        text: '分類', // 預設 “分類”
-      },
-      tag: {
-        location: 3, // 在導航欄菜單中所佔的位置，預設3
-        text: '標籤', // 預設 “標簽”
-      },
-    },
-    friendLink: [
-      // {
-      //   title: '午後南雜',
-      //   desc: 'Enjoy when you can, and endure when you must.',
-      //   email: '1156743527@qq.com',
-      //   link: 'https://www.recoluan.com',
-      // },
-      // {
-      //   title: 'vuepress-theme-reco',
-      //   desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-      //   avatar:
-      //     'https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png',
-      //   link: 'https://vuepress-theme-reco.recoluan.com',
-      // },
-    ],
+    // blogConfig: {
+    //   category: {
+    //     location: 2, // 在導航欄菜單中所佔的位置，預設2
+    //     text: '分類', // 預設 “分類”
+    //   },
+    //   tag: {
+    //     location: 3, // 在導航欄菜單中所佔的位置，預設3
+    //     text: '標籤', // 預設 “標簽”
+    //   },
+    // },
+    // friendLink: [
+    //   {
+    //     title: '午後南雜',
+    //     desc: 'Enjoy when you can, and endure when you must.',
+    //     email: '1156743527@qq.com',
+    //     link: 'https://www.recoluan.com',
+    //   },
+    //   {
+    //     title: 'vuepress-theme-reco',
+    //     desc: 'A simple and beautiful vuepress Blog & Doc theme.',
+    //     avatar:
+    //       'https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png',
+    //     link: 'https://vuepress-theme-reco.recoluan.com',
+    //   },
+    // ],
     logo: '/logo.png',
     // 搜索設定
     search: true,
